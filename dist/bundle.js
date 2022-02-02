@@ -1,2 +1,26 @@
-!function n(o,i,u){function f(r,e){if(!i[r]){if(!o[r]){var t="function"==typeof require&&require;if(!e&&t)return t(r,!0);if(c)return c(r,!0);throw(e=new Error("Cannot find module '"+r+"'")).code="MODULE_NOT_FOUND",e}t=i[r]={exports:{}},o[r][0].call(t.exports,function(e){return f(o[r][1][e]||e)},t,t.exports,n,o,i,u)}return i[r].exports}for(var c="function"==typeof require&&require,e=0;e<u.length;e++)f(u[e]);return f}({1:[function(e,r,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.getGreetingText=void 0;t.getGreetingText=function(e){return"Hello from ".concat(e)}},{}],2:[function(e,r,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n,t=e("./helpers");e="greeting",n="Jordan",document.getElementById(e).innerText=(0,t.getGreetingText)(n)},{"./helpers":1}]},{},[2]);
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getGreetingText = void 0;
+var getGreetingText = function getGreetingText(name) {
+    return "Hello from " + name;
+};
+exports.getGreetingText = getGreetingText;
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var helpers_1 = require("./helpers");
+var DIV_ID = "greeting";
+var GREETING_BY = "Daniil";
+var renderGreeting = function renderGreeting(elementId, textContent) {
+    var textBox = document.getElementById(elementId);
+    textBox.innerText = (0, helpers_1.getGreetingText)(textContent);
+};
+renderGreeting(DIV_ID, GREETING_BY);
+
+},{"./helpers":1}]},{},[2])
+
 //# sourceMappingURL=bundle.js.map
